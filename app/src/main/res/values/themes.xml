@@ -8,8 +8,26 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/inset_splash</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Theme.SiWika</item>
-        <!-- Status bar and Nav bar configs -->
-        <item name="android:statusBarColor" >@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
     </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconSize">32dp</item>
+        <item name="itemIconTint">@drawable/nav_item_color</item>
+        <item name="itemTextColor">@drawable/nav_item_color</item>
+        <item name="itemActiveIndicatorStyle">@style/App.CustomIndicator.Orange</item>
+    </style>
+
+    <style name="App.CustomIndicator.Orange" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/orange</item>
+        <item name="android:width">60dp</item>
+        <item name="android:height">40dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.SiWika.Circle</item>
+    </style>
+
+    <style name="ShapeAppearance.SiWika.Circle" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
