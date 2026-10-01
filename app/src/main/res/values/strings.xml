@@ -2,7 +2,7 @@
     <string name="app_name">SiWika</string>
     <string name="abc">ABC</string>
     <string name="about">About</string>
-    <string name="about_the_app">About the App</string>
+    <string name="about_the_app">asd</string>
     <string name="about_the_deaf_community">About the Deaf Community</string>
     <string name="camera">Camera</string>
     <string name="camerax">CameraX</string>
@@ -14,4 +14,5 @@
     <string name="setting">Setting</string>
     <string name="translator">Translator</string>
     <string name="your_lesson">Your Lesson</string>
+
 </resources>

@@ -51,10 +51,20 @@ class GestureRecognizerResultsAdapter : RecyclerView.Adapter<GestureRecognizerRe
     inner class ViewHolder(private val binding: CellGestureRecognizerResultBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(label: String?, score: Float?) {
             with(binding) {
-                tvLabel.text = label ?: NO_VALUE
-                tvScore.text =
-                    if (score != null) String.format(Locale.US,"%.2f",score)
-                    else NO_VALUE
+                // Set the Text
+                tvLabel.text = label?.replaceFirstChar { it.uppercase() } ?: NO_VALUE
+
+                // Format Score as Percentage (e.g., 95%)
+                if (score != null) {
+                    val percentage = (score * 100).toInt()
+                    tvScore.text = "$percentage%"
+
+                    // Update the Progress Bar (scaled to 100)
+                    indicatorConfidence.setProgress(percentage, true)
+                } else {
+                    tvScore.text = NO_VALUE
+                    indicatorConfidence.progress = 0
+                }
             }
         }
     }

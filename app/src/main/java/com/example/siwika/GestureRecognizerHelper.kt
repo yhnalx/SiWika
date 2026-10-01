@@ -116,10 +116,10 @@ class GestureRecognizerHelper(
     fun recognizeLiveStream(imageProxy : ImageProxy) {
         val frameTime = SystemClock.uptimeMillis()
         // Copy out RGB bits from the frame to a bitmap buffer
-        val bitmapBuffer = Bitmap.createBitmap(
-            imageProxy.width + 1000, imageProxy.height + 1000, Bitmap.Config.ARGB_8888
+        val bitmapBuffer : Bitmap = Bitmap.createBitmap(
+            imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888
         )
-
+        //imageProxy.planes[0].buffer.rewind()
         imageProxy.use { bitmapBuffer.copyPixelsFromBuffer(imageProxy.planes[0].buffer) }
         imageProxy.close()
         val matrix = Matrix().apply {
@@ -315,7 +315,7 @@ class GestureRecognizerHelper(
 
     companion object {
         val TAG = "GestureRecognizerHelper ${this.hashCode()}"
-        private const val MP_RECOGNIZER_TASK = "fsl.task"
+        private const val MP_RECOGNIZER_TASK = "fsl_2026.task"
 
         const val DELEGATE_CPU = 0
         const val DELEGATE_GPU = 1

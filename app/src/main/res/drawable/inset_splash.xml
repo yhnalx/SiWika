@@ -2,9 +2,9 @@
 <inset
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/logo"
-    android:insetLeft="10dp"
-    android:insetRight="30dp"
-    android:insetTop="30dp"
-    android:insetBottom="10dp"
+    android:insetLeft="50dp"
+    android:insetRight="50dp"
+    android:insetTop="70dp"
+    android:insetBottom="70dp"
     android:inset="@dimen/splashscreen_icon_size"
     />
